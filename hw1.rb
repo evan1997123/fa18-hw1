@@ -1,16 +1,17 @@
 def squared_sum(a, b)
   # Q1 CODE HERE
-
+  var=a+b
+  return var*var	
 end
 
 def sort_array_plus_one(a)
   # Q2 CODE HERE
-
+  a.sort.map! { |e| e+1 }
 end
 
 def combine_name(first_name, last_name)
   # Q3 CODE HERE
-
+  return first_name + ' '+ last_name
 end
 
 def blockin_time(a)
@@ -49,4 +50,12 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  # array = word.chars
+  # array = array.map { |e| e.to_s }
+  # total = 0
+  # for i in array
+  # 	total += values[i.intern]
+  # end
+  # return total
+  return word.chars.sum{|a| values[a.intern]}
 end
